@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio Moduli HTML Completo</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; max-width: 600px; margin: 20px auto; padding: 20px; background-color: #f4f4f9; }
+        form { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        div { margin-bottom: 15px; }
+        label { display: block; font-weight: bold; margin-bottom: 5px; }
+        .inline-label { display: inline; font-weight: normal; }
+        input[type="text"], input[type="number"], input[type="email"], select, textarea {
+            width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;
+        }
+        button { background-color: #007bff; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        button:hover { background-color: #0056b3; }
+        fieldset { border: 1px solid #ddd; padding: 10px; border-radius: 4px; margin-bottom: 15px; }
+        legend { font-weight: bold; padding: 0 10px; }
+    </style>
+</head>
+<body>
+
+    <h1>Registrazione Utente</h1>
+    <p>Completa il modulo sottostante per testare tutti gli elementi HTML richiesti.</p>
+
+    <form action="#" method="POST">
+        
+        <div>
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome" placeholder="Es. Mario Rossi" required>
+        </div>
+
+        <div>
+            <label for="email">Indirizzo Email:</label>
+            <input type="email" id="email" name="email" placeholder="esempio@mail.it" required>
+        </div>
+
+        <div>
+            <label for="eta">Età:</label>
+            <input type="number" id="eta" name="eta" min="18" max="99" value="25">
+        </div>
+
+        <fieldset>
+            <legend>Genere</legend>
+            <input type="radio" id="m" name="genere" value="maschio">
+            <label for="m" class="inline-label">Maschio</label>
+            <input type="radio" id="f" name="genere" value="femmina">
+            <label for="f" class="inline-label">Femmina</label>
+            <input type="radio" id="o" name="genere" value="altro">
+            <label for="o" class="inline-label">Altro</label>
+        </fieldset>
+
+        <div>
+            <label for="paese">Paese di residenza:</label>
+            <select id="paese" name="paese">
+                <option value="">-- Seleziona un paese --</option>
+                <option value="it">Italia</option>
+                <option value="fr">Francia</option>
+                <option value="de">Germania</option>
+                <option value="uk">Regno Unito</option>
+            </select>
+        </div>
+
+        <fieldset>
+            <legend>Interessi</legend>
+            <input type="checkbox" id="coding" name="interessi" value="coding">
+            <label for="coding" class="inline-label">Programmazione</label><br>
+            <input type="checkbox" id="design" name="interessi" value="design">
+            <label for="design" class="inline-label">Design</label><br>
+            <input type="checkbox" id="sport" name="interessi" value="sport">
+            <label for="sport" class="inline-label">Sport</label>
+        </fieldset>
+
+        <div>
+            <label for="commento">Parlaci di te:</label>
+            <textarea id="commento" name="commento" rows="4" placeholder="Scrivi qui il tuo messaggio..."></textarea>
+        </div>
+
+        <input type="hidden" name="id_sessione" value="XYZ-98765">
+
+        <div>
+            <input type="checkbox" id="copia" name="invia_copia">
+            <label for="copia" class="inline-label">Voglio ricevere una copia di questo modulo via email</label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="termini" name="termini" required>
+            <label for="termini" class="inline-label">Accetto i termini e le condizioni di servizio</label>
+        </div>
+
+        <div style="margin-top: 20px;">
+            <button type="submit">Invia i dati</button>
+        </div>
+
+    </form>
+
+</body>
+</html>
